@@ -16,9 +16,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex w-full flex-col items-center justify-center p-4">
+      <main className="flex w-full flex-col items-center justify-center">
         <form
-          className="flex w-full max-w-3xl space-x-2"
+          className="sticky top-0 flex w-full max-w-3xl space-x-2 bg-white/80 px-4 py-4"
           onSubmit={(e) => {
             e.preventDefault();
             mutate({ url });
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
           </button>
         </form>
 
-        <div className="flex w-full max-w-3xl justify-center py-8">
+        <div className="flex w-full max-w-3xl justify-center px-4 py-4">
           {!data && !isLoading && "Busca un articulo para comenzar"}
           {isLoading && (
             <div
